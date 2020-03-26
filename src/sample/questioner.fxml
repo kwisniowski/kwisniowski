@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane disable="false" focusTraversable="false" prefHeight="-1.0" prefWidth="458.0" visible="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <MenuBar cache="true" cacheHint="DEFAULT" layoutX="14.0" layoutY="14.0" useSystemMenuBar="false">
+      <menus>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Nowa gra" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Pomoc">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Jak grać?" />
+            <MenuItem mnemonicParsing="false" text="Autor " />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <GridPane alignment="TOP_LEFT" blendMode="SRC_OVER" gridLinesVisible="false" hgap="15.0" layoutX="16.0" layoutY="55.0" pickOnBounds="true" prefHeight="331.0" prefWidth="572.0" snapToPixel="true">
+      <children>
+        <Button alignment="TOP_CENTER" contentDisplay="CENTER" disable="false" mnemonicParsing="false" prefWidth="147.0" text="Graj!" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="false" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button mnemonicParsing="false" prefWidth="147.0" text="Graj!" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" prefWidth="147.0" text="..." textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label alignment="CENTER" text="Zagrajmy w obliczenia matematyczne" textAlignment="CENTER" underline="false" visible="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <textFill>
+            <Color blue="0.129" green="0.800" red="0.000" fx:id="x1" />
+          </textFill>
+        </Label>
+        <Label text="Zagrajmy w kalendarz" textFill="$x1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Label text="Wymyślimy coś jeszcze ..." textFill="$x1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <ImageView fitHeight="206.75" fitWidth="275.66666666666663" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <ImageView id="pytajniki.jpg" fitHeight="194.8125" fitWidth="275.6666259765625" GridPane.columnIndex="1" GridPane.rowIndex="0">
+          <image>
+            <Image url="@../resources/pytajniki.jpg" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+        <VBox id="VBox" alignment="CENTER" spacing="5.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="133.0" text="Twoje imię:" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Label>
+            <TextField fx:id="nameTextField" alignment="CENTER" editable="true" onAction="#clickEvent" onMouseClicked="#clickEvent" prefWidth="200.0" text="Wpisz imię" VBox.vgrow="ALWAYS" />
+          </children>
+        </VBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="127.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="506.0" minWidth="10.0" prefWidth="445.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="247.0" minHeight="10.0" prefHeight="238.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="120.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+</AnchorPane>
